@@ -228,7 +228,64 @@ a:hover { text-decoration: underline; }
 .copy-btn.copied .copy-icon { display: none; }
 .copy-btn.copied .check-icon { display: inline; color: rgba(167,139,250,0.95); }
 .email-hint { margin-top: 8px; font-size: 12px; color: var(--muted); }
+/* Reddit popover */
+.reddit-wrap {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
 
+.reddit-pop {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  min-width: 320px;
+  padding: 12px;
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  background: linear-gradient(180deg, rgba(17,24,39,0.92), rgba(15,23,42,0.92));
+  box-shadow: var(--shadow);
+  opacity: 0;
+  transform: translateY(-6px);
+  pointer-events: none;
+  transition: opacity 140ms ease, transform 140ms ease;
+}
+
+.reddit-pop::before {
+  content: "";
+  position: absolute;
+  top: -7px;
+  right: 14px;
+  width: 12px;
+  height: 12px;
+  background: rgba(17,24,39,0.92);
+  border-left: 1px solid var(--line);
+  border-top: 1px solid var(--line);
+  transform: rotate(45deg);
+}
+
+.reddit-wrap.open .reddit-pop {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.reddit-note {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.reddit-note-title {
+  font-weight: 800;
+  letter-spacing: 0.2px;
+  text-transform: lowercase;
+}
+
+.reddit-note-text {
+  display: grid;
+  gap: 4px;
+}
 /* Buttons */
 .btn {
   display: inline-flex;

@@ -19,6 +19,11 @@ const elEmailPop = document.getElementById("emailPop");
 const elEmailText = document.getElementById("emailText");
 const elCopyEmailBtn = document.getElementById("copyEmailBtn");
 
+// reddit
+const elRedditWrap = document.getElementById("redditWrap");
+const elRedditBtn = document.getElementById("redditBtn");
+const elRedditPop = document.getElementById("redditPop");
+
 // toast
 const elToast = document.getElementById("toast");
 
@@ -473,6 +478,42 @@ function wireEmailUI() {
   });
 }
 
+// ---------- reddit popover ----------
+let redditCloseTimer = null;
+
+function openRedditPop() {
+  clearTimeout(redditCloseTimer);
+  elRedditWrap.classList.add("open");
+}
+function closeRedditPopDelayed() {
+  clearTimeout(redditCloseTimer);
+  redditCloseTimer = setTimeout(() => {
+    elRedditWrap.classList.remove("open");
+  }, 120);
+}
+
+function wireRedditUI() {
+  if (!elRedditWrap || !elRedditBtn || !elRedditPop) return;
+
+  elRedditWrap.addEventListener("mouseenter", openRedditPop);
+  elRedditWrap.addEventListener("mouseleave", closeRedditPopDelayed);
+
+  elRedditBtn.addEventListener("focus", openRedditPop);
+  elRedditBtn.addEventListener("blur", closeRedditPopDelayed);
+
+  elRedditBtn.addEventListener("click", (e) => {
+    openRedditPop();
+  });
+
+  document.addEventListener("click", (e) => {
+    if (!elRedditWrap.contains(e.target)) elRedditWrap.classList.remove("open");
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") elRedditWrap.classList.remove("open");
+  });
+}
+
 // ---------- wire UI ----------
 function wireUI() {
   elPrev.addEventListener("click", prevPage);
@@ -501,6 +542,7 @@ function wireUI() {
   });
 
   wireEmailUI();
+  wireRedditUI();
   updateToggleUI();
   setLang(lang);
 }

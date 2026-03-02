@@ -72,7 +72,10 @@ window.I18N = {
     project_updated_badge: (updated) => `Updated: ${updated}`,
     project_stars_badge: (stars) => `Stars: ${stars}`,
 
-    fake_send_msg: "Mensagem não enviada (formulário apenas visual)."
+    fake_send_msg: "Mensagem não enviada (formulário apenas visual).",
+
+    reddit_pop_title: "não diretamente profissional",
+    reddit_pop_desc: "Este perfil é inteiramente para publicação de material relacionado ao Mechanized Depths."
   },
 
   en: {
@@ -148,6 +151,9 @@ window.I18N = {
     project_updated_badge: (updated) => `Updated: ${updated}`,
     project_stars_badge: (stars) => `Stars: ${stars}`,
 
-    fake_send_msg: "Not sent (visual-only form)."
+    fake_send_msg: "Not sent (visual-only form).",
+
+    reddit_pop_title: "not directly professional",
+    reddit_pop_desc: "This profile is solely used to publish content related to Mechanized Depths."
   }
 };
