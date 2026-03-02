@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="Portfólio de Lucas Milanez" />
+    <title>Lucas Milanez — Portfólio</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <a class="skip-link" href="#content" data-i18n="skip_to_content">Pular para conteúdo</a>
+
+    <header class="site-header">
+      <div class="container header-grid">
+        <div class="brand">
+          <div class="avatar" aria-hidden="true"></div>
+          <div class="brand-text">
+            <h1 data-i18n="name">Lucas Milanez</h1>
+            <p class="subtitle" data-i18n="headline">
+              Estudante de Sistemas de Informação • Backend • Segurança • System Design
+            </p>
+          </div>
+        </div>
+
+        <div class="header-actions">
+          <!-- GitHub icon button -->
+          <a
+            class="icon-link"
+            href="https://github.com/lucasmilanezs"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="GitHub"
+            title="GitHub"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                fill="currentColor"
+                d="M12 .5C5.73.5.75 5.62.75 12c0 5.1 3.29 9.42 7.86 10.95.58.11.79-.25.79-.56v-2.1c-3.2.71-3.88-1.57-3.88-1.57-.52-1.36-1.28-1.73-1.28-1.73-1.04-.73.08-.72.08-.72 1.15.08 1.76 1.2 1.76 1.2 1.02 1.78 2.68 1.27 3.33.97.1-.76.4-1.27.73-1.56-2.56-.3-5.26-1.31-5.26-5.84 0-1.29.45-2.35 1.2-3.18-.12-.3-.52-1.52.11-3.16 0 0 .97-.31 3.18 1.21a10.7 10.7 0 0 1 2.9-.4c.98 0 1.97.14 2.9.4 2.21-1.52 3.18-1.21 3.18-1.21.63 1.64.23 2.86.11 3.16.75.83 1.2 1.89 1.2 3.18 0 4.55-2.71 5.53-5.29 5.83.41.37.79 1.1.79 2.23v3.31c0 .31.21.68.8.56A11.27 11.27 0 0 0 23.25 12C23.25 5.62 18.27.5 12 .5Z"
+              />
+            </svg>
+          </a>
+
+          <!-- LinkedIn icon button -->
+          <a
+            class="icon-link"
+            href="https://www.linkedin.com/in/lucasmilanezs/"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="LinkedIn"
+            title="LinkedIn"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                fill="currentColor"
+                d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5ZM.4 23.5h4.2V7.9H.4v15.6ZM8.2 7.9h4v2.1h.1c.6-1.1 2.1-2.3 4.3-2.3 4.6 0 5.4 3 5.4 6.9v8.9h-4.2v-7.9c0-1.9 0-4.2-2.6-4.2s-3 2-3 4.1v8h-4.2V7.9Z"
+              />
+            </svg>
+          </a>
+
+          <!-- Email icon + popover -->
+          <div class="email-wrap" id="emailWrap">
+            <button
+              class="icon-btn-quiet"
+              id="emailBtn"
+              type="button"
+              aria-haspopup="true"
+              aria-expanded="false"
+              aria-label="Email"
+              title="Email"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  fill="currentColor"
+                  d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2Zm0 4-8 5-8-5V6l8 5 8-5v2Z"
+                />
+              </svg>
+            </button>
+
+            <div class="email-pop" id="emailPop" role="dialog" aria-label="Email">
+              <div class="email-row">
+                <span class="email-text" id="emailText" data-i18n="contact_email_value">lucas_milanez@outlook.com</span>
+
+                <button class="copy-btn" id="copyEmailBtn" type="button" aria-label="Copiar email" title="Copiar">
+                  <span class="copy-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24">
+                      <path
+                        fill="currentColor"
+                        d="M16 1H4c-1.1 0-2 .9-2 2v12h2V3h12V1Zm4 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2Zm0 16H8V7h12v14Z"
+                      />
+                    </svg>
+                  </span>
+
+                  <span class="check-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24">
+                      <path fill="currentColor" d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2Z" />
+                    </svg>
+                  </span>
+                </button>
+              </div>
+
+              <div class="email-hint" data-i18n="email_hint">Clique para copiar</div>
+            </div>
+          </div>
+
+          <!-- Language toggle -->
+          <div class="lang-switch" aria-label="Language toggle">
+            <span class="lang-label" aria-hidden="true">PT</span>
+            <button class="switch" id="langToggle" type="button" role="switch" aria-checked="false" aria-label="Toggle language">
+              <span class="switch-thumb" aria-hidden="true"></span>
+            </button>
+            <span class="lang-label" aria-hidden="true">EN</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main id="content">
+      <section class="hero">
+        <div class="container hero-grid">
+          <div>
+            <h2 data-i18n="hero_title">Portfólio profissional</h2>
+            <p class="lead" data-i18n="hero_lead">
+              Desenvolvimento orientado a backend e segurança, com foco em arquitetura limpa, qualidade técnica e entregabilidade.
+            </p>
+
+            <div class="hero-actions">
+              <a class="btn primary" href="#projects" data-i18n="hero_primary_cta">Ver projetos</a>
+              <a class="btn ghost" href="#contact" data-i18n="hero_secondary_cta">Contato</a>
+            </div>
+          </div>
+
+          <aside class="card highlight" aria-label="Featured project">
+            <div class="featured-head">
+              <h3 data-i18n="featured_title">Projeto em destaque</h3>
+
+              <span class="love-badge" aria-label="Labor Of Love">
+                <span class="love-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <path
+                      fill="currentColor"
+                      d="M12 21s-7-4.6-9.5-8.4C.7 9.7 2.2 6.8 5.2 6.1c1.7-.4 3.4.2 4.5 1.5 1.1-1.3 2.8-1.9 4.5-1.5 3 .7 4.5 3.6 2.7 6.5C19 16.4 12 21 12 21Z"
+                    />
+                  </svg>
+                </span>
+                <span data-i18n="love_badge">Labor Of Love</span>
+              </span>
+            </div>
+
+            <p class="strong" data-i18n="featured_project_name">MechanizedDepths</p>
+            <p class="muted" data-i18n="featured_project_desc">
+              Projeto pessoal desenvolvido com intenção e consistência. Mesmo sendo um hobby, vem consolidando aprendizado prático em infraestrutura de servidor Java, lógica orientada a eventos e padrões data-driven.
+            </p>
+            <a
+              class="btn primary"
+              id="featuredProjectLink"
+              href="https://github.com/lucasmilanezs/MechanizedDepths"
+              target="_blank"
+              rel="noreferrer"
+              data-i18n="featured_project_cta"
+            >
+              Ver no GitHub
+            </a>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section" id="about">
+        <div class="container">
+          <header class="section-header">
+            <h2 data-i18n="about_title">Sobre</h2>
+          </header>
+
+          <div class="grid-2">
+            <article class="card">
+              <h3 data-i18n="about_card_1_title">Perfil</h3>
+              <p data-i18n="about_card_1_p1">
+                Estudante de Sistemas de Informação com foco em desenvolvimento backend, segurança aplicada e desenho de sistemas.
+                Busco consistência de arquitetura, clareza de domínio e soluções que permaneçam sustentáveis conforme o sistema cresce.
+              </p>
+              <p class="muted" data-i18n="about_card_1_p2">
+                Interesses recorrentes: autenticação/autorização, padrões de API, observabilidade, modelagem e decisões orientadas a trade-offs.
+              </p>
+            </article>
+
+            <article class="card">
+              <h3 data-i18n="about_card_2_title">Direcionamento</h3>
+              <ul class="list">
+                <li data-i18n="about_list_1">Arquitetura e código legível como padrão, não exceção</li>
+                <li data-i18n="about_list_2">Segurança integrada ao fluxo de desenvolvimento</li>
+                <li data-i18n="about_list_3">Documentação objetiva e foco em entrega</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="techstack">
+        <div class="container">
+          <header class="section-header">
+            <h2 data-i18n="stack_title">Stack Overview</h2>
+          </header>
+
+          <div class="stack card">
+            <div class="stack-section">
+              <h3 class="stack-h3"><span data-i18n="stack_langs">Languages</span></h3>
+              <div class="stack-badges" id="stackLangBadges" aria-label="Language badges"></div>
+            </div>
+
+            <div class="stack-divider"></div>
+
+            <div class="stack-section">
+              <h3 class="stack-h3"><span data-i18n="stack_fw">Frameworks & Libraries</span></h3>
+              <div class="stack-badges" id="stackFwBadges" aria-label="Framework badges"></div>
+            </div>
+
+            <div class="stack-divider"></div>
+
+            <div class="stack-section">
+              <h3 class="stack-h3"><span data-i18n="stack_tools">Tools & Platforms</span></h3>
+              <div class="stack-badges" id="stackToolBadges" aria-label="Tool badges"></div>
+            </div>
+          </div>
+
+          <div class="stack-note">
+            <span class="warn-star" aria-hidden="true">*</span>
+            <span data-i18n="stack_disclaimer">
+              A quantidade de projetos ao lado das tecnologias é inferida a partir de repositórios públicos no GitHub; não contabiliza projetos privados ou de outra natureza e pode estar desatualizada ou não refletir a totalidade real de projetos criados com cada tecnologia.
+            </span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="projects">
+        <div class="container">
+          <header class="section-header">
+            <h2 data-i18n="projects_title">Projetos</h2>
+            <p class="muted" data-i18n="projects_subtitle">
+              Seleção dos repositórios mais recentes (não-forks) do meu GitHub.
+            </p>
+          </header>
+
+          <div class="carousel" aria-label="Project carousel">
+            <div class="carousel-top">
+              <div class="carousel-status" id="carouselStatus" aria-live="polite"></div>
+
+              <div class="carousel-controls">
+                <button class="icon-btn" id="prevBtn" type="button" aria-label="Previous page">‹</button>
+                <button class="icon-btn" id="nextBtn" type="button" aria-label="Next page">›</button>
+              </div>
+            </div>
+
+            <div class="carousel-viewport" tabindex="0" id="carouselViewport" aria-label="Carousel area">
+              <div class="carousel-track" id="carouselTrack"></div>
+            </div>
+
+            <div class="carousel-dots" id="carouselDots" aria-label="Carousel indicators"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="contact">
+        <div class="container">
+          <header class="section-header">
+            <h2 data-i18n="contact_title">Contato</h2>
+            <p class="muted" data-i18n="contact_subtitle">Canais de contato e presença online.</p>
+          </header>
+
+          <div class="grid-2">
+            <div class="card">
+              <h3 data-i18n="contact_links_title">Links</h3>
+              <ul class="list">
+                <li>
+                  <span data-i18n="contact_github_label">GitHub:</span>
+                  <a href="https://github.com/lucasmilanezs" target="_blank" rel="noreferrer">github.com/lucasmilanezs</a>
+                </li>
+                <li>
+                  <span data-i18n="contact_email_label">E-mail:</span>
+                  <span class="muted" data-i18n="contact_email_value">lucas_milanez@outlook.com</span>
+                </li>
+                <li>
+                  <span data-i18n="contact_linkedin_label">LinkedIn:</span>
+                  <a class="muted" href="https://www.linkedin.com/in/lucasmilanezs/" target="_blank" rel="noreferrer">
+                    linkedin.com/in/lucasmilanezs
+                  </a>
+                </li>
+                <li>
+                  <span data-i18n="contact_reddit_label">Reddit:</span>
+                  <a class="muted" href="https://www.reddit.com/user/Zambim_/" target="_blank" rel="noreferrer">
+                    reddit.com/user/Zambim_
+                  </a>
+                  <span class="muted small" data-i18n="contact_reddit_note">
+                    (caso haja interesse em saber mais sobre o projeto Mechanized Depths)
+                  </span>
+                </li>
+              </ul>
+            </div>
+
+            <form class="card" aria-label="Message form">
+              <h3 data-i18n="contact_form_title">Mensagem</h3>
+
+              <label class="field">
+                <span data-i18n="contact_form_name">Seu nome</span>
+                <input type="text" placeholder="Ex: Ana" autocomplete="name" data-i18n-placeholder="contact_form_name_ph" />
+              </label>
+
+              <label class="field">
+                <span data-i18n="contact_form_msg">Sua mensagem</span>
+                <textarea rows="4" placeholder="Escreva aqui..." data-i18n-placeholder="contact_form_msg_ph"></textarea>
+              </label>
+
+              <button class="btn primary" type="button" id="fakeSendBtn" data-i18n="contact_form_btn">Enviar</button>
+              <p class="muted small" id="fakeSendMsg" role="status" aria-live="polite"></p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <small data-i18n="footer_dev">Desenvolvido por Lucas Milanez</small>
+        <small class="muted">© <span id="year"></span></small>
+      </div>
+    </footer>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="i18n.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
