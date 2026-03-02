@@ -82,12 +82,9 @@ a:hover { text-decoration: underline; }
   width: 42px;
   height: 42px;
   border-radius: 14px;
-  background:
-    radial-gradient(circle at 30% 30%, rgba(167,139,250,0.9), transparent 55%),
-    radial-gradient(circle at 70% 80%, rgba(124,58,237,0.9), transparent 55%),
-    rgba(255,255,255,0.06);
   border: 1px solid var(--line);
   box-shadow: var(--shadow);
+  background: url("./avatar.jpg") center/cover no-repeat;
 }
 
 .brand h1 { margin: 0; font-size: 16px; letter-spacing: 0.2px; }
